@@ -1,0 +1,167 @@
+/* Animación del fondo de marrón a blanco */
+body {
+    /* margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #873d08, #f9f6f1);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite; */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4d2600 30%, #f9f6f1 70%);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease-in-out infinite;
+}
+
+/* Animación fluida de degradado */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 70% 40%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Estilos para la galería de fotos */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.photo {
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+    width: 800px; /* Tamaño máximo que quieras */
+    height: 1100px; /* Tamaño máximo que quieras */
+    object-fit: cover; /* Mantiene la proporción, pero recorta la imagen si es necesario */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.photo img:hover {
+    transform: scale(1.05);
+}
+
+.photo-pic {
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-pic img {
+    width: 100%; /* Tamaño máximo que quieras */
+    height: 100%; /* Tamaño máximo que quieras */
+    object-fit: cover; /* Mantiene la proporción, pero recorta la imagen si es necesario */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.photo-pic img:hover {
+    transform: scale(1.05);
+}
+
+/* Loader centrado */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Estilos para el botón */
+#boton {
+    background-color: #f9f6f1; /* Color de fondo del botón */
+    color: #873d08; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animación suave para cambios */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+#boton:hover {
+    background-color: #873d08; /* Color de fondo al pasar el mouse */
+    color: #f9f6f1; /* Color del texto al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
+.title {
+    font-size: 2rem; /* Tamaño del texto */
+    color: #c873fd; /* Color del texto */
+    width: 52%;
+    margin-left: 20%;
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espacio alrededor del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-decoration: underline; /* Sombra para dar profundidad */
+    background-color: #c3a895; /* Fondo semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem; /* Tamaño del texto más pequeño */
+        padding: 10px; /* Menos espacio alrededor del texto */
+    }
+
+    #boton {
+        font-size: 14px; /* Tamaño de la fuente del botón más pequeño */
+        padding: 8px 16px; /* Menos espaciado interno */
+    }
+
+    .photo {
+        margin: 10px; /* Menos margen entre fotos */
+        width: 90%; /* Ajusta el ancho a un 90% del contenedor */
+    }
+
+    .photo img {
+        width: 100%; /* Ancho completo en móviles */
+        height: auto; /* Altura automática para mantener la proporción */
+    }
+
+    .gallery-container {
+        padding: 10px; /* Menos padding en la galería */
+    }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem; /* Tamaño del texto aún más pequeño */
+        padding: 5px; /* Espacio reducido alrededor del texto */
+    }
+
+    #boton {
+        font-size: 12px; /* Tamaño de fuente aún más pequeño */
+        padding: 6px 12px; /* Espaciado interno aún más pequeño */
+    }
+
+    .photo {
+        margin: 5px; /* Menor margen */
+    }
+}
